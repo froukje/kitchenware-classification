@@ -1,0 +1,14 @@
+{
+    "batch_size": {
+        "_type": "quniform",
+        "_value": [4, 32, 2]
+    },
+    "backbone":{
+        "_type": "choice",
+        "_value": ["vgg16", "alexnet"]
+    },
+    "lr":{
+        "_type": "choice",
+	"_value": [0.01, 0.001, 0.0001]
+    }
+}

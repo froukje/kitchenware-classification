@@ -1,0 +1,11 @@
+data/*
+__pycache__/*
+lightning_logs/*
+logs/*
+saved_models/*
+mlruns.db
+mlruns/*
+predictions/*
+nni/nni-experiments/*
+notebooks/*.pth
+notebooks/.ipynb_checkpoints/*

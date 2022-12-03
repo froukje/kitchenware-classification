@@ -1,0 +1,17 @@
+name: kitchenware_classification
+
+channels:
+  - default
+dependencies:
+  - python=3.9
+  - pylint
+  - black
+  - isort
+  - pip
+  - pip:
+    - mlflow
+    - pytorch-lightning
+    - torchvision
+    - nni
+    - sqlalchemy
+    - pre-commit

@@ -1,0 +1,27 @@
+experimentName: first search
+trialConcurrency: 2
+maxExecDuration: 24h
+maxTrialNum: 200
+searchSpacePath: /home/frauke/kitchenware-classification/nni/search_space/search_space.json
+logDir: /home/frauke/kitchenware-classification/nni/nni-experiments
+#choice: local, remote, pai, kubeflow
+trainingServicePlatform: local
+#choice: true, false
+useAnnotation: false
+tuner:
+  #choice: TPE, Random, Anneal, Evolution
+  builtinTunerName: TPE
+  classArgs:
+    #choice: maximize, minimize
+    optimize_mode: minimize
+assessor:
+   builtinAssessorName: Medianstop
+   classArgs:
+     optimize_mode: minimize
+     start_step: 20
+trial:
+  command: python3 /home/frauke/kitchenware-classification/train.py --data-dir /home/frauke/kitchenware-classification/data --nni --gpus 1
+  codeDir: /home/frauke/kitchenware-classification/
+  gpuNum: 1
+localConfig:
+  useActiveGpu: false

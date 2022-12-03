@@ -1,0 +1,20 @@
+[tool.pylint.messages_control]
+
+disable = [
+	"too-many-locals",
+	"redefined-outer-name",
+	"signature-differs",
+	"arguments-differ",
+	"invalid-name",
+	"no-member",
+	"logging-fstring-interpolation",
+	"wrong-import-order",
+	"not-callable"
+	]
+
+[tool.black]
+line-length = 88
+skip-string-normlization = true
+
+[tool.isort]
+profile = "black"
